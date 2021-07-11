@@ -50,9 +50,9 @@ class GuessGame {
 
                 if(p1isright||p2isright||p3isright) {
                     System.out.println("Atleast one of the three guessed it right!");
-                    System.out.println("Player one got it right?"+p1isright);
-                    System.out.println("Player two got it right?"+p2isright);
-                    System.out.println("Player three got it right?"+p3isright);
+                    System.out.println("Player one wins? "+p1isright);
+                    System.out.println("Player two wins? "+p2isright);
+                    System.out.println("Player three wins? "+p3isright);
                     break;
                 }else {
                     System.out.println("All players will try again");
@@ -62,7 +62,7 @@ class GuessGame {
 }
 
 class Player {
-    int number=0;
+    int number;
         public void guess() {
             number=(int) (Math.random()*10);
         }
