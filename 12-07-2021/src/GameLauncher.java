@@ -1,53 +1,76 @@
 import java.util.Scanner;
 
-class GuessGame{
-	Scanner scn = new Scanner(System.in);
-//	System.out.println("Enter target");
-	int target;
-	void startGame(int target) {
-		Player p1 = new Player();
-		System.out.println("Enter Guess1");
-		int g1 = p1.setGuess(scn.nextInt());
-		Player p2 = new Player();
-		System.out.println("Enter Guess2");
-		int g2 = p2.setGuess(scn.nextInt());
-		Player p3 = new Player();
-		System.out.println("Enter Guess3");
-		int g3 = p3.setGuess(scn.nextInt());
-		this.target = target;
-		if(g1 == this.target) {
-			System.out.println("Player1 wins");
-		}else {
-			System.out.println("Player1 guess again");
-		}
-		if(g2 == this.target) {
-			System.out.println("Player2 wins");
-		}else {
-			System.out.println("Player2 guess again");
-		}
-		if(g3 == this.target) {
-			System.out.println("Player3 wins");
-		}else {
-			System.out.println("Player3 guess again");
-		}
-		
-		
-	}
+
+class GuessGame {
+    Player p1;
+    Player p2;
+    Player p3;
+
+        void startGame() {
+            p1 = new Player();
+            p2 = new Player();
+            p3 = new Player();
+
+            int guessp1=0;
+            int guessp2=0;
+            int guessp3=0;
+
+            boolean p1isright =false;
+            boolean p2isright =false;
+            boolean p3isright =false;
+
+            int targetNumber =(int )(Math.random()*10);
+            System.out.println("Target number is from 0-9");
+
+            while(true) {
+                System.out.println("Target number is "+targetNumber);
+
+                p1.guess();
+                p2.guess();
+                p3.guess();
+
+                guessp1 =p1.number;
+                System.out.println("Player one guessed "+guessp1);
+
+                guessp2 =p2.number;
+                System.out.println("Player two guessed "+guessp2);
+
+                guessp3 =p3.number;
+                System.out.println("Player three guessed "+guessp3);
+
+                if (guessp1==targetNumber) {
+                    p1isright=true;
+                }
+                if (guessp2==targetNumber) {
+                    p2isright=true;
+                }
+                if(guessp3==targetNumber) {
+                    p3isright=true;
+                }
+
+                if(p1isright||p2isright||p3isright) {
+                    System.out.println("Atleast one of the three guessed it right!");
+                    System.out.println("Player one got it right?"+p1isright);
+                    System.out.println("Player two got it right?"+p2isright);
+                    System.out.println("Player three got it right?"+p3isright);
+                    break;
+                }else {
+                    System.out.println("All players will try again");
+                }
+            }
+        }
 }
-class Player{
-	int guess;
-	int setGuess(int guess) {
-		this.guess = guess;
-		return this.guess;
-	}
+
+class Player {
+    int number=0;
+        public void guess() {
+            number=(int) (Math.random()*10);
+        }
 }
 public class GameLauncher {
 	public static void main(String[] args) {
 		GuessGame game1 = new GuessGame();
-		Scanner scn = new Scanner(System.in);
-		System.out.println("Enter the target");
-		int target = scn.nextInt();
-		game1.startGame(target);
+		game1.startGame();
 	}
 
 }
