@@ -16,10 +16,10 @@ class Point{
 class Quadrilateral{
 	private Point p1, p2, p3, p4;
 	Quadrilateral(double x1, double x2, double x3, double x4, double y1, double y2, double y3, double y4 ) {
-		Point p1 = new Point(x1, y1);
-		Point p2 = new Point(x2, y2);
-		Point p3 = new Point(x3, y3);
-		Point p4 = new Point(x4, y4);		
+		p1 = new Point(x1, y1);
+		p2 = new Point(x2, y2);
+		p3 = new Point(x3, y3);
+		p4 = new Point(x4, y4);		
 	}
 	Point getPoint1() {
 		return p1;
@@ -49,7 +49,7 @@ class Trapezoid extends Quadrilateral{
 		}
 	}
 	double getArea() {
-		return height * getSumOfTwoSides()/2.0;
+		return getHeight() * getSumOfTwoSides()/2.0;
 	}
 	double getSumOfTwoSides() {
 		if (getPoint1().getY() == getPoint2().getY()) {
@@ -79,7 +79,7 @@ public class QuadrilateralAreaHierarchy {
 
 	public static void main(String[] args) {
 		Square s1 = new Square(1,3,3,1,1,1,3,3);
-		System.out.println(s1.getPoint2().getY());
+		System.out.println(s1.getArea());
 
 	}
 
