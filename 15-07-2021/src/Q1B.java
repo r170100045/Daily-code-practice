@@ -1,12 +1,12 @@
 import java.io.IOException;
 
-public class Q2A {
+public class Q1B {
 	public static void checkException() throws IOException {
 		throw new IOException("exception found");
 	}
 
 	public static void main(String[] args) {
-		Q2A p = new Q2A();
+		Q1B p = new Q1B();
 		try {
 			p.checkException();
 		}catch(Exception e) {
