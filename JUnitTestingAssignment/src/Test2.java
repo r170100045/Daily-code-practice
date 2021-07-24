@@ -16,4 +16,8 @@ public class Test2 {
 	public void testGetAgeNegativeTest() {
 		assertTrue(age == "abc"); // negative testing scenario
 	}
+	@AfterClass
+	public static void testDone() {
+		System.out.println("test done for class Test2");
+	}
 }
