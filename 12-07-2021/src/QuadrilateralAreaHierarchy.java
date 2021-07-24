@@ -78,8 +78,11 @@ class Square extends Rectangle{
 public class QuadrilateralAreaHierarchy {
 
 	public static void main(String[] args) {
-		Square s1 = new Square(1,3,3,1,1,1,3,3);
-		System.out.println(s1.getArea());
+//		Square s1 = new Square(1,3,3,1,1,1,3,3);
+//		System.out.println(s1.getArea());
+		String s1 = "abc";
+		String s2 = "abc";
+		System.out.println("s1 == s2 is:" + s1 == s2);
 
 	}
 
