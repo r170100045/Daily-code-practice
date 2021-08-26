@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPageForAliens</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <h1 class="title">
+        <img src="icon.svg" alt="Icon image">&nbsp; P A T T E R N F L Y
+    </h1>
+    <p class="intro">
+        Welcome to Patternfly! Enter your details to login <br>
+        in this great space or create a new account
+    </p>
+    <div class="form">
+        <div>
+            <form action="none" class="language">
+                <select name="language" id="language">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                </select>
+            </form>
+        </div>
+        <br>
+
+
+        <h2 class="login-message">Log In to Your Account </h2>
+        <form action="none" validate>
+            <input type="text" id="user" placeholder="Email or phone or username" class=" input" required><br>
+            <input type="password" id="password" placeholder="password" validate class=" input" required><br>
+            <input type="checkbox" value="Agree" name="checkbox" id="30 days" class="checkbox">
+            <label for="30 days" class="days">Keep me logged in for 30
+                days</label>
+            <a href="#" style="float: right; margin-right:6%; text-decoration: none;">Forgot password?</a>
+            <button type="reset" onclick="loginVerify()" class="submit">Login</button> <br>
+            <p class="sign-up">Need an account? <a href="sign-up.html">Sign up</a></p>
+        </form>
+        <p class="terms-and-policies"></p>
+    </div>
+    <p class="terms-and-policies">
+        <a href="#" style="color: white;text-decoration: none;">Terms of Use</a>&nbsp; &middot; &nbsp;
+        <a href="#" style="color: white;text-decoration: none;">Help</a>&nbsp; &middot; &nbsp;
+        <a href="#" style="color: white;text-decoration: none;">Privacy Policy</a>
+    </p>
+    <script src="login.js"></script>
+</body>
+
+</html>

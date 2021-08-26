@@ -1,0 +1,100 @@
+body {
+    margin-top: 3%;
+    background-image: url('background_image.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+    color: white;
+    font-size: 200%;
+    /* padding-top: 1%; */
+    display: flex;
+}
+img{
+    position: relative;
+}
+
+.intro {
+    color: white;
+    text-align: center;
+    margin-top: -1%;
+    margin-bottom: 1%;
+}
+
+.form {
+    width: 27%;
+    height: 400px;
+    margin: auto;
+    background-color: rgb(191, 228, 25);
+}
+
+.language {
+    float: right;
+    margin-right: 7.5%;
+    margin-top: 7.5%;
+    cursor: pointer;
+}
+
+.login-message {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-content: center;
+    text-align: center;
+    padding-top: 10%;
+    padding: auto;
+}
+
+.input {
+    font-style: italic;
+    align-content: center;
+    margin: auto;
+    display: block;
+    width: 85%;
+}
+
+.checkbox {
+    float: left;
+    margin-left: 6%;
+    cursor: pointer;
+}
+
+.submit {
+    width: 85%;
+    background-color: blue;
+    color: white;
+    margin: auto;
+    margin-top: 30px;
+    padding: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+
+.days {
+    float: left;
+    font-size: 14px;
+}
+
+.sign-up {
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.terms-and-policies {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+	body {
+		background: lightgrey;
+	}
+}
