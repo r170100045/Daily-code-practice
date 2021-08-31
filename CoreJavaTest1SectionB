@@ -1,0 +1,71 @@
+Section B
+1.
+A says Hello
+B says Hello
+B says hello
+
+2. 'b = a' will not compile as child class B may override methods (other properties) of parent class A.
+    and 'a = b' will run without any compilation errors.
+3. (b) statement will fail because it may be possible that child object B have some other methods and overridden methods.
+4. (a) is invalid as child object can't be initialised with parent constructor.
+5. 15
+   15
+   15
+   20
+  
+6.   int occurences(int [] arr, int k) {
+		Arrays.sort(arr);
+		int place = 0;
+		int occurences = 0;
+		int i = 0;
+		while(i < arr.length) {
+			if(arr[i] != arr[i-1]) {
+				place++;
+			}else {
+				if(place==k-1) {
+					occurences++;
+				}
+			}
+			i++;
+			
+		}
+		return occurences;
+	}
+
+
+
+
+7. Interface is implemented and class is extended by its subclasses. Interface have all the methods as abstaract hence all the methods have to be implemented by its child classes whereas abstract class has some methods abstract and some methods default.
+
+8. We are trying to access instance variable in static method hence it will show compiler error.
+
+9. First one is the superclass of all the exceptions unchecked and checked ones whereas RuntimeException is unchecked exception class we may or may not declare exception when runtime exception is thrown.
+10. int fib(int n){
+	if(n==0){
+ 	return 0;
+ 	}
+ 	if(n==1){
+ 	return 1
+ 	}
+	int fib = fib(n-1) + fib(n-2);
+	// we can also use dynamic programming if we are allowed to pass an array too in parameteres of the fib function so that we would need to calculate the function value for a particular parameter multiple times.
+	return fib;
+	}
+ 
+ 11.  As the 'name' variable is private in parent class Animal so Dog class would not be able to inherit that hence the compiler error.
+ 
+ 12. There are two wrong things in this code, first static method is trying to access instance method and second is return type of toString() method is string whereas return type of doSomeWork() is void.
+
+13. 15
+    15
+   
+14. int factorial(int n){
+	if(n==1){
+	return n;
+	}
+	int fact = n * factorial(n-1);
+	return fact;
+	}
+	
+15. slipstream slipstream stream
+
