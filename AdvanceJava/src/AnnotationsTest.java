@@ -1,14 +1,18 @@
 import java.lang.annotation.*;
 import java.lang.reflect.*;
+
+//marker annotation
 @Retention (RetentionPolicy.RUNTIME)
 @interface isEmployee{}
 
+//single value annotation
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 @interface Location{
 	String location() default "Hyderabad";
 }
 
+//multi value annotation
 @Retention (RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @interface CompanyDetails{
