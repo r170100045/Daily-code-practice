@@ -63,7 +63,11 @@
 	<version>3.0.2</version>
 </dependency>
 
-
+<dependency>
+    <groupId>com.sun.jersey</groupId>
+    <artifactId>jersey-server</artifactId>
+    <version>1.19.4</version>
+</dependency>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet-core</artifactId>

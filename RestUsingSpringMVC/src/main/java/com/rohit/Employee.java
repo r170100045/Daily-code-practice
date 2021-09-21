@@ -1,5 +1,4 @@
-package com.rohit.restAPIDemo;
-import jakarta.xml.bind.annotation.XmlRootElement;
+package com.rohit;
 
 
 public class Employee {
