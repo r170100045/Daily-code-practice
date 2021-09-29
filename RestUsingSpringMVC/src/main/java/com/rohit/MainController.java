@@ -1,4 +1,5 @@
 package com.rohit;
+import java.awt.PageAttributes.MediaType;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,7 @@ public class MainController {
 		return mv;
 		
 	}
-	@RequestMapping(value = "/getEmployee/",method = RequestMethod.GET)
+	@RequestMapping(value = "/getEmployee/",method = RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody List<Employee> getEmployee(){
 		EmployeeRepository empR = new EmployeeRepository();
 		return empR.getEmployee(); 
